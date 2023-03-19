@@ -1,10 +1,12 @@
 //making simple api
 
-const http = require('http');
-const data = require('./data');
+const http = require("http");
+const data = require("./data");
 
-http.createServer((req,resp)=>{
-    resp.writeHead(200,{'Content-Type':'application\json'});
+http
+  .createServer((req, resp) => {
+    resp.writeHead(200, { "Content-Type": "applicationjson" });
     resp.write(JSON.stringify(data));
     resp.end();
-}).listen(5000);
+  })
+  .listen(5000);
